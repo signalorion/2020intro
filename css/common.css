@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*자기소개페이지 공통 스타일시트*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*사진설명필요할경우*/
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    outline: 2px dotted red;
+}
+
+.inbox {
+    width: 1440px;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*비율유지박스 설정*/
+.rbx {
+    position: relative;
+}
+
+.rbx::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.ibx {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
