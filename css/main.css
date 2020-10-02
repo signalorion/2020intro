@@ -6,6 +6,10 @@
 @import url(common.css);
 
 /*********************************************인트로페이지 시작*/
+body {
+    overflow: hidden;
+}
+
 #intro::after {
     background: url(../images/bigQM.png) no-repeat center/contain;
     width: 100%;
@@ -38,6 +42,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.search_box_fake {
+    position: absolute;
+    cursor: pointer;
+
+    width: 106%;
+    height: 170%;
+    top: -50px;
+    left: -50px;
 }
 
 .intro_tit {
@@ -105,7 +119,7 @@
 .intro_bbg {
     background-color: #fff;
     position: absolute;
-    top: 204px;
+    top: 196px;
     left: 50%;
     transform: translateX(-50%);
     width: calc(70% - 100px);
@@ -160,18 +174,134 @@
 
 /*인트로페이지 끝***************************************************/
 
+/********************************************작은 검색창을 누르면*/
+/*아 근데 왜 컨텍트를 클릭하면 살짝 밀려나는 느낌이 나는거지??????*/
+#aboutme_box {position: relative;}
+#contact_box{position: relative;}
+
+.search_list {
+    position: absolute;
+    width: 50vw;
+    height: 60vh;
+    background-color: white;
+    z-index: 999;
+    border: 1px solid #707070;
+    border-top: 0;
+    padding: 3vw 4vw;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+}
+
+.sl_index {
+    display: flex;
+    flex-direction: column;
+}
+
+.sl_index a {
+    padding-bottom: 2vh;
+
+}
+
+.sl_index h4 {
+    color: #f80;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 95px;
+}
+
+.sl_index a dt {
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+
+.here1 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #72D9FF;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.here2 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #46FF7E;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.here3 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #FFFF31;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.sl_index a dt img {
+    width: 90px;
+
+}
+
+.sl_index a dd {
+    margin-left: 50px;
+    color: #f80;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.sl_index a dd:nth-child(3) {
+    padding-left: 70px;
+}
+.sl_index a dd:nth-child(4) {
+    padding-left: 70px;
+}
+
+
+.sl_index_close {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.sl_index_close img {
+    transform: scale(.9);
+}
+
+/*작은 검색창 눌렀을 때 설정 끝**********************************/
+
 
 
 
 /***********************************************aboutme 페이지!*/
 .search_box {
-    width: 60%;
+    width: 50vw;
     border: 23px solid #f80;
     height: 140px;
     margin: 0 auto;
 }
 
-.search_box img {
+.search_mark {
     width: 67px;
     position: absolute;
     right: 15px;
@@ -186,7 +316,7 @@
     padding-left: 30px;
 }
 
-.search_box a {
+.search_tit {
     display: flex;
     width: 100%;
     height: 100%;
@@ -225,7 +355,7 @@
     color: #f80;
     font-size: 35px;
     position: absolute;
-    right: -300px;
+    right: -321px;
     top: 55px;
 }
 
@@ -277,13 +407,14 @@
 
 .mycertifi {
     position: absolute;
-    width: 35%;
+    width: 0%;
     background-color: #FF9900;
     bottom: 8%;
     left: 0;
     color: #edfaff;
     height: 190px;
     line-height: 30px;
+    
 }
 
 .mystudy img {
@@ -306,7 +437,7 @@
 
 .mystudy {
     position: absolute;
-    width: 35%;
+    width: 0%;
     background-color: #FF8800;
     bottom: 45%;
     right: 0%;
@@ -332,7 +463,7 @@
 
 .mytool {
     position: absolute;
-    width: 35%;
+    width: 0%;
     background-color: #FFAA00;
     bottom: 8%;
     right: 0;
@@ -357,31 +488,74 @@
 
 /****************************************************컨텐츠페이지*/
 
-#content{position: relative;}
-.content_wrap{width: 100%; height: 80%; position: absolute; bottom: 0; overflow-y: scroll;}
+#content {
+    position: relative;
+}
+
+.content_wrap {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    overflow-y: scroll;
+}
 
 .content_wrap::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
- 
+
 .content_wrap::-webkit-scrollbar-thumb {
-  background: #666;
-  border-radius: 5px;
+    background: #666;
+    border-radius: 5px;
 }
 
 .content_wrap::-webkit-scrollbar-track {
-  background: #ddd;
-  border-radius: 5px;
+    background: #ddd;
+    border-radius: 5px;
 }
 
-.content{width: 100%; height: 60%;}
-.cont_tit{margin: 0 auto; width: 50%; display: flex; color: #f80; height: 20%; margin-bottom: -10px; margin-top: 10px;}
-.cont_tit h1{font-size: 50px; padding-right: 10px; font-weight: 900;}
-.cont_tit p{font-size: 30px; font-weight: bold; line-height: 82px;}
+.content {
+    width: 100%;
+    height: 60%;
+}
 
-.cont_thumb{width: 100%; height: 80%; display: block;}
-.cont_thumb.source{ background: url(../images/mysource2.PNG) no-repeat center;background-position: 50% 60%;}
-.cont_thumb.openbooks{background: url(../images/openbooksbg.jpg) no-repeat; background-position: 50% 40%;}
+.cont_tit {
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    color: #f80;
+    height: 20%;
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.cont_tit h1 {
+    font-size: 50px;
+    padding-right: 10px;
+    font-weight: 900;
+}
+
+.cont_tit p {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 82px;
+}
+
+.cont_thumb {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
+.cont_thumb.source {
+    background: url(../images/mysource2.PNG) no-repeat center;
+    background-position: 50% 60%;
+}
+
+.cont_thumb.openbooks {
+    background: url(../images/openbooksbg.jpg) no-repeat;
+    background-position: 50% 40%;
+}
 
 
 
@@ -404,13 +578,14 @@
 
 #contact_box {
     position: relative;
-    font-size: 24px;
 }
 
 .github_link {
     position: absolute;
     left: 5%;
     top: 40%;
+    font-size: 24px;
+    
 }
 
 .github_link img {
@@ -434,6 +609,7 @@
     position: absolute;
     right: 5%;
     top: 40%;
+    font-size: 24px;
 }
 
 .contact_add img {
@@ -445,4 +621,5 @@
 .contact_add dd {
     padding-top: 10px;
 }
+
 /*컨텍트페이지 끝****************************************************/

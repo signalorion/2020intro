@@ -66,3 +66,24 @@ body {
     right: 0;
     left: 0;
 }
+
+/*플롯사용 필요한 경우*/
+.clearboth::before{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.clearboth::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+
+
+
+
+
+
