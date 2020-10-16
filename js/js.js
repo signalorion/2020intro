@@ -70,7 +70,7 @@ $(function () {
     
     $(".sl_index a").hover(function(){
         var sl_index = $(this).attr("data-color");
-        console.log(sl_index);
+        //console.log(sl_index);
         
         $(this).css({
             backgroundColor:sl_index
@@ -84,9 +84,16 @@ $(function () {
     
     /*내 소개 페이지*/
     //내가 이 페이지에 도달했을 때 이 효과가 나게 할 수 없을까?
-    $(".mycertifi, .mystudy, .mytool").animate({
+   $(".mycertifi, .mystudy, .mytool").animate({
         width:"35%"
     },700);
+    
+    
+    /*컨텐츠페이지*/
+    $(".content a").click(function(e){
+        e.preventDefault();
+    });
+
    
    
 

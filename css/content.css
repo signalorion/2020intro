@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/*자기소개페이지 - content 스타일시트*/
+
+/*스타일시트*/
+@import url(common.css);
+
+body {
+    /*overflow: hidden;*/
+}
+
+/*열린책들 설명페이지*/
+/*검색창*/
+#content1_origin {
+    position: relative;
+}
+
+
+.here2 dd img {
+    width: 35px;
+    margin-left: 13px;
+}
+
+.mygitlink {
+    margin: 10px;
+}
+
+.mygitlink a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15%;
+    color: #f80;
+    font-size: 22px;
+}
+
+.mygitlink img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.mygitlink a h6 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/*검색창끝*****************************************************/
+
+/*본문*/
+.content_box {
+    display: flex;
+    width: 100%;
+}
+
+.content_box_left {
+    width: 60vw;
+}
+
+.left_top {
+    position: relative;
+    background-color: #F80;
+    height: 200px;
+    margin: 7vw 0;
+    padding: 4% 0;
+}
+
+.left_top h3,
+.left_bottom h3 {
+    position: absolute;
+    top: -60px;
+    right: 15%;
+    color: #FF8800;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.left_top img {
+    position: absolute;
+    top: -50px;
+    width: 80px;
+    right: 5%;
+}
+
+.left_top p {
+    width: 80%;
+    margin: 0 0 0 auto;
+    line-height: 2.2;
+    font-size: 15px;
+    word-break: keep-all;
+    color: #f0f0f0;
+    font-weight: 600;
+}
+
+.left_bottom {
+    position: relative;
+    background-color: white;
+    border: 10px solid #f80;
+    border-left: 0;
+    height: 200px;
+    padding: 3% 0;
+}
+
+.left_bottom_img {
+    position: absolute;
+    top: -93px;
+    width: 80px;
+    right: 5%;
+}
+
+.left_bottom_list {
+    width: 80%;
+    margin: 0 0 0 auto;
+    line-height: 2.2;
+    font-size: 15px;
+    word-break: keep-all;
+    color: #707070;
+    font-weight: 600;
+}
+
+.left_bottom_list img {
+    width: 40px;
+    vertical-align: -15px;
+}
+
+.content_box_right {
+    width: 35vw;
+    margin-top: 2vw;
+    margin-left: 5vw;
+}
+
+.content_box_right img {
+    width: 18.5vw;
+    display: block;
+}
+
+.content_box_right a {
+    display: block;
+    color: #707070;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+/*1의 리뉴얼결과물*/
+#content1_result{
+    position: relative;
+    background: url(../images/content1_bg.jpg) no-repeat center/cover;
+}
+#content1_result h2{
+    text-align: center;
+    margin: 2vw;
+    color: #FF8800;
+    font-weight: 800;
+}
+#content1_result h2 img{
+    width: 60px;
+    vertical-align: -20px;
+}
+.inbox.cont1_main{
+    height: auto;
+}
+.cont1_main{
+    display: flex;
+}
+
+.cont1_main section{
+    width: 33.33%;
+}
+.renew_sec1 img, .renew_sec2 img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
