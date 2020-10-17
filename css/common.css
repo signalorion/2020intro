@@ -2,6 +2,7 @@
 
 /*자기소개페이지 공통 스타일시트*/
 
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 /*font-family: 'Noto Sans KR', sans-serif;*/
 
@@ -68,22 +69,163 @@ body {
 }
 
 /*플롯사용 필요한 경우*/
-.clearboth::before{
+.clearboth::before {
     display: block;
     content: '';
     clear: both;
 }
 
-.clearboth::after{
+.clearboth::after {
     display: block;
     content: '';
     clear: both;
 }
 
+/********************************************작은 검색창을 누르면*/
+#aboutme_box, #contact_box{
+    position: relative;
+}
+.search_box {
+    width: 50vw;
+    border: 23px solid #f80;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.search_mark {
+    width: 67px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+.search_box p {
+    vertical-align: middle;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 94px;
+    padding-left: 30px;
+}
+
+.search_tit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #f80;
+    position: relative;
+    background-color: #fff;
+}
+
+.search_list {
+    position: absolute;
+    width: 50vw;
+    height: 60vh;
+    background-color: white;
+    z-index: 999;
+    border: 1px solid #707070;
+    border-top: 0;
+    padding: 3vw 4vw;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+}
+
+.sl_index {
+    display: flex;
+    flex-direction: column;
+}
+
+.sl_index a {
+    padding-bottom: 2vh;
+
+}
+
+.sl_index h4 {
+    color: #f80;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 95px;
+}
+
+.sl_index a dt {
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+
+.here1 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #72D9FF;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.here2 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #46FF7E;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.here3 dt::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #FFFF31;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.sl_index a dt img {
+    width: 90px;
+
+}
+
+.sl_index a dd {
+    margin-left: 50px;
+    color: #f80;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.sl_index a dd:nth-child(3) {
+    padding-left: 70px;
+}
+
+.sl_index a dd:nth-child(4) {
+    padding-left: 70px;
+}
 
 
+.sl_index_close {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
 
+.sl_index_close img {
+    transform: scale(.9);
+}
 
-
-
-
+/*작은 검색창 눌렀을 때 설정 끝**********************************/
