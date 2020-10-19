@@ -88,11 +88,8 @@ $(function () {
         width:"35%"
     },700);
     
+
     
-    /*컨텐츠페이지*/
-    $(".content a").click(function(e){
-        e.preventDefault();
-    });
 
    
    
