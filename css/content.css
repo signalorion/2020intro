@@ -6,7 +6,7 @@
 @import url(common.css);
 
 body {
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 /*열린책들 설명페이지*/
@@ -137,58 +137,335 @@ body {
     display: block;
     color: #707070;
     font-weight: 800;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 /*1의 리뉴얼결과물*/
-#content1_result{
+#content1_result {
     position: relative;
     background: url(../images/content1_bg.jpg) no-repeat center/cover;
 }
-#content1_result h2{
+
+#content1_result h2 {
+    font-size: 30px;
     text-align: center;
     margin: 2vw;
     color: #FF8800;
     font-weight: 800;
+    text-shadow: 0 0 20px #ffe558;
 }
-#content1_result h2 img{
+
+#content1_result h2 img {
     width: 60px;
     vertical-align: -20px;
 }
-.inbox.cont1_main{
+
+.inbox.cont1_main {
     height: auto;
 }
-.cont1_main{
+
+.cont1_main {
     display: flex;
     justify-content: space-between;
 }
 
-.cont1_main section{
+.cont1_main section {
+    position: relative;
     width: 32%;
 }
-.renew_sec1 img, .renew_sec2 img{
+
+.renew_sec1 img,
+.renew_sec2 img {
     width: 100%;
 }
-.renew_sec3{
-    position: relative;
-}
-.renew_sec3 img{
+
+.renew_sec3 img {
     position: absolute;
-    top: 0;
+    top: 2vw;
     width: 47%;
-}
-.renew_sec3 img:nth-child(2){
-    right: 10%;
+    transform: scale(1.15);
 }
 
-.cont1_main section p{
+.renew_sec3 img:nth-child(1) {
+    left: 10%;
+}
+
+.renew_sec3 img:nth-child(2) {
+    right: 4%;
+}
+
+.cont1_main section p {
     text-align: right;
 }
 
-.renew_sec3 p{
-    padding-top: 100%;
-    padding-right: 10%;
+.renew_sec3 p {
+    padding-top: 113.6%;
 }
+
+/*썸네일에 호버시*/
+.renew_hover1 {
+    width: 100%;
+    height: 95%;
+    background-color: rgba(0, 0, 0, 0.30);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.renew_hover1 span {
+    position: absolute;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 250px;
+    background-color: #f80;
+    border-radius: 50%;
+    color: #f7ffff;
+    text-align: center;
+    line-height: 250px;
+    font-size: 30px;
+    font-weight: 200;
+    transform: rotate(-11deg);
+}
+
+/*디테일 설명*/
+.cont_detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/content1_bg.jpg) no-repeat center/cover;
+}
+
+
+/*바깥을 클릭하면 닫히게 하기*/
+.clicktoclose {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+}
+
+/*디테일에 떠있는 검색박스*/
+.detail_search_box {
+    width: 50vw;
+    border: 23px solid #f80;
+    height: 140px;
+    margin: 0 auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+
+.detail_search_box p {
+    vertical-align: middle;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 94px;
+    padding-left: 30px;
+}
+
+.cdtxt {
+    padding: 0 11vw;
+    padding-top: 3vw;
+}
+
+
+
+.cdimg {
+    width: 40%;
+    float: left;
+    position: relative;
+    z-index: 3;
+}
+
+
+.cdimg img {
+    width: 100%;
+}
+.imgtop{
+    position: relative;
+}
+.imgbottom{
+    position: relative;
+}
+.dnimg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cdimg h6 {
+    text-align: center;
+    color: #707070;
+    font-size: 15px;
+}
+
+.cdimg h6 img {
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+
+/*설명*/
+.cdinfo {
+    float: right;
+    width: 55%;
+    margin-left: 5%;
+    padding-top: 15vw;
+
+}
+
+
+.cdiul {
+    text-align: right;
+    position: relative;
+    z-index: 3;
+}
+
+.cdiul li {
+    line-height: 2.2;
+    font-size: 18px;
+    color: #454545;
+}
+
+#content1_result .cdih2 {
+    text-align: right;
+    position: relative;
+    z-index: 3;
+}
+
+#content1_result .cdih2 img {
+    width: 50px;
+    vertical-align: -15px;
+    margin-right: 15px;
+}
+
+.cdcolor {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cdcolor div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.cdcolor div:nth-child(2) {
+    margin: 0 25px;
+}
+
+.cdcolor .color1 {
+    background-color: #C5161D;
+}
+
+.cdcolor .color2 {
+    background-color: #F3F8F2;
+}
+
+.cdcolor .color3 {
+    background-color: #2E2E2E;
+}
+
+/*썸네일 클릭시 설명 이동버튼*/
+.next_detail {
+    position: absolute;
+    top: calc(50% - 50px);
+    right: 0;
+    z-index: 6;
+}
+
+.next_detail, .prev_detail{
+    width: 100px;
+    height: 100px;
+}
+
+.prev_detail {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 0;
+    z-index: 6;
+}
+
+/*5번은 특이함*/
+.cdtxt.cd5{
+    display: flex;
+}
+.left_main{
+    width: 100%;
+}
+.right_main{
+    width: 100%;
+}
+
+.img_left{
+    flex: 1;
+    padding-top: 11vw;
+    position: relative;
+}
+.img_left dnimg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img_left img{
+    position: relative;
+    z-index: 3;
+    width: 99%;
+}
+
+.cdinfo.cd5{
+    flex: 3;
+    margin-left: 0;
+    margin-right: 3vw;
+}
+
+.img_right{
+    flex: 2;
+    position: relative;
+}
+.img_right dnimg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img_right img{
+    position: relative;
+    z-index: 3;
+}
+
+.cdtxt.cd5 h6 img {
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+
+.cdtxt.cd5 h6 {
+    text-align: center;
+    color: #707070;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
