@@ -183,9 +183,12 @@ body {
 }
 
 .myphoto_box {
-    background-color: #f80;
     border-radius: 50%;
+    background: url(../images/myinfo_pic.png);
+    background-size: 110%;
+    background-position: 50% 60%;
 }
+
 
 .minime {
     width: 105px;
@@ -208,7 +211,7 @@ body {
     font-size: 35px;
     position: absolute;
     right: -321px;
-    top: 55px;
+    top: 25px;
 }
 
 .pro_name h3 {
@@ -233,6 +236,10 @@ body {
 
 .pro_info a {
     color: #ff8800;
+}
+
+.info_download {
+    font-weight: 600;
 }
 
 #aboutme {
@@ -266,7 +273,7 @@ body {
     color: #edfaff;
     height: 190px;
     line-height: 30px;
-    
+
 }
 
 .mystudy img {
@@ -436,7 +443,7 @@ body {
     left: 5%;
     top: 40%;
     font-size: 24px;
-    
+
 }
 
 .github_link img {
@@ -447,6 +454,10 @@ body {
 
 .github_link dd {
     padding-top: 20px;
+}
+
+.github_link a:hover {
+    background-color: darkorange;
 }
 
 .myemoji {
@@ -471,6 +482,14 @@ body {
 
 .contact_add dd {
     padding-top: 10px;
+    text-align: center;
+}
+
+.contact_add dd span:hover {
+    background-color: darkorange;
+}
+.contact_add a:hover {
+    background-color: darkorange;
 }
 
 /*컨텍트페이지 끝****************************************************/

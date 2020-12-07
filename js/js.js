@@ -5,6 +5,7 @@ var dcsb = 0; //0은 불허용이고 1은 허용
 
 
 $(function () {
+ 
     /****************************************************인트로에서*/
     $(".search_box_fake").click(function () {
         if (dcsb === 1) {
@@ -90,7 +91,17 @@ $(function () {
 
 
     /***************************************컨텐츠페이지*/
-    
+
+    /*번호복사*/
+    var clipboard = new Clipboard('.btnAccountCopy');
+
+    clipboard.on('success', function (e) {
+
+        alert('전화번호가 복사되었습니다.');
+
+        console.log(e);
+
+    });
 
 
 
