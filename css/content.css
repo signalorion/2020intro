@@ -14,6 +14,9 @@ body {
 #content1_origin {
     position: relative;
 }
+#content2_origin {
+    position: relative;
+}
 
 
 .here2 dd img {
@@ -132,6 +135,10 @@ body {
     width: 18.5vw;
     display: block;
 }
+.content_box_right.cont2 img {
+    width: 25vw;
+    display: block;
+}
 
 .content_box_right a {
     display: block;
@@ -145,8 +152,12 @@ body {
     position: relative;
     background: url(../images/content1_bg.jpg) no-repeat center/cover;
 }
+#content2_result {
+    position: relative;
+    background: url(../images/content2_bg.jpg) no-repeat center/cover;
+}
 
-#content1_result h2 {
+#content1_result h2, #content2_result h2{
     font-size: 30px;
     text-align: center;
     margin: 2vw;
@@ -156,6 +167,10 @@ body {
 }
 
 #content1_result h2 img {
+    width: 60px;
+    vertical-align: -20px;
+}
+#content2_result h2 img {
     width: 60px;
     vertical-align: -20px;
 }
@@ -178,8 +193,12 @@ body {
 .renew_sec2 img {
     width: 100%;
 }
+.renew_sec10 img,
+.renew_sec20 img {
+    width: 100%;
+}
 
-.renew_sec3 img {
+.renew_sec3 img, .renew_sec30 img {
     position: absolute;
     top: 2vw;
     width: 47%;
@@ -193,12 +212,22 @@ body {
 .renew_sec3 img:nth-child(2) {
     right: 4%;
 }
+.renew_sec30 img:nth-child(1) {
+    left: 10%;
+}
+
+.renew_sec30 img:nth-child(2) {
+    right: 4%;
+}
 
 .cont1_main section p {
     text-align: right;
 }
 
 .renew_sec3 p {
+    padding-top: 113.6%;
+}
+.renew_sec30 p {
     padding-top: 113.6%;
 }
 
@@ -231,11 +260,15 @@ body {
 /*디테일 설명*/
 .cont_detail {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url(../images/content1_bg.jpg) no-repeat center/cover;
+}
+.cont_detail.cont2{
+    background: url(../images/content2_bg.jpg) no-repeat center/cover;
 }
 
 
@@ -334,13 +367,13 @@ body {
     color: #454545;
 }
 
-#content1_result .cdih2 {
+#content1_result .cdih2, #content2_result .cdih2 {
     text-align: right;
     position: relative;
     z-index: 3;
 }
 
-#content1_result .cdih2 img {
+#content1_result .cdih2 img, #content2_result .cdih2 img {
     width: 50px;
     vertical-align: -15px;
     margin-right: 15px;
@@ -356,11 +389,9 @@ body {
     width: 55px;
     height: 55px;
     border-radius: 50%;
+    margin-left: 25px;
 }
 
-.cdcolor div:nth-child(2) {
-    margin: 0 25px;
-}
 
 .cdcolor .color1 {
     background-color: #C5161D;
@@ -372,6 +403,28 @@ body {
 
 .cdcolor .color3 {
     background-color: #2E2E2E;
+}
+
+.cdcolor .color4 {
+    background-color: #000;
+}
+.cdcolor .color5 {
+    background-color: #fff;
+}
+.cdcolor .color6 {
+    background-color: #d2d5ce;
+}
+.cdcolor .color7 {
+    background-color: #c1ccd0;
+}
+.cdcolor .color8 {
+    background-color: #cbc9d4;
+}
+.cdcolor .color9 {
+    background-color: #cbdaf9;
+}
+.cdcolor .color10 {
+    background-color: #AF1724;
 }
 
 /*썸네일 클릭시 설명 이동버튼*/

@@ -1,8 +1,10 @@
+//컨텐츠페이지 자바스크립트
+
 //전역변수////////////////
 //1. 페이지번호를 먹이는 전역변수
 var pno = 0;
 //2. 전체 페이지 수
-var totnum = 2;
+var totnum = 4;
 //3. 광스크롤방지
 var psts = 0; //0은 허용이고 1은 불허용이다
 //4. 한페이지 높이값
@@ -38,6 +40,9 @@ $(function () {
         }, 400);
 
     }); /////// mousewheel /////////////////
+    
+    
+    
 
     /*썸네일 호버시*/
     $(".renew_hover1").hide();
@@ -56,12 +61,22 @@ $(function () {
     $(".renew_sec1").click(function () {
         $(".cont_detail.cd1").fadeIn();
     });
+    $(".renew_sec10").click(function () {
+        $(".cont_detail.cd10").fadeIn();
+    });
     $(".renew_sec2").click(function () {
         $(".cont_detail.cd2").fadeIn();
+    });
+    $(".renew_sec20").click(function () {
+        $(".cont_detail.cd20").fadeIn();
     });
     $(".renew_sec3").click(function () {
         $(".cont_detail.cd5").fadeIn();
     });
+    $(".renew_sec30").click(function () {
+        $(".cont_detail.cd50").fadeIn();
+    });
+
 
     /*디테일페이지*/
     /*디테일 썸네일클릭시*/
@@ -76,11 +91,11 @@ $(function () {
     
     /*5번*/
     $(".img_left").click(function () {
-        $(".img_left").children().eq(0).hide();
+        $(this).children().eq(0).hide();
         $(".dnimg", this).fadeIn(400);
     });
     $(".img_right").click(function () {
-        $(".img_right").children().eq(0).hide();
+        $(this).children().eq(0).hide();
         $(".dnimg", this).fadeIn(400);
     });
     

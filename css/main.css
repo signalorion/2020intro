@@ -427,6 +427,8 @@ body {
 /***************************************************컨텍트페이지*/
 #contact {
     position: relative;
+    background: url(../images/bigQM_50p.png) repeat center/contain;
+    background-size: 20%;
 }
 
 .github_link a,
