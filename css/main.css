@@ -93,6 +93,17 @@ body {
     color: #BCBCBC;
     font-weight: bold;
     font-size: 24px;
+    animation: clickmove 1.5s alternate infinite;
+}
+
+@keyframes clickmove {
+    from {
+        top: -25px;
+    }
+
+    to {
+        top: -40px;
+    }
 }
 
 .textflow_intro {
@@ -320,6 +331,38 @@ body {
     z-index: 1;
 }
 
+.mytoolplus {
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    font-size: 25px;
+    color: #f80;
+    font-weight: 800;
+}
+
+.mytoolplus img {
+    width: 50px;
+    /*transform: rotateY(180deg);*/
+    margin-right: 10px;
+    animation: toolbubble .9s ease infinite;
+}
+
+
+@keyframes toolbubble {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .mytool {
     position: absolute;
     width: 0%;
@@ -342,6 +385,130 @@ body {
     z-index: 2;
     position: absolute;
 }
+
+
+/*더보기 클릭시*/
+
+.tooluse{
+    display: none;
+    width: 70%;
+    height: 70%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background-color: #fff;
+    border: 5px outset;
+}
+.tuwindow{
+    background-color: #0000C8;
+    width: 100%;
+    height: 10%;
+    position: relative;
+    
+}
+.tuwindow h4{
+    font-family: neohan;
+    font-size: 23px;
+    color: #fff;
+    padding: 18px 23px;
+    letter-spacing: 10px;
+}
+.tuwindow h4 img{
+        width: 30px;
+    vertical-align: -8px;
+    margin-right: 10px;
+}
+.tuclose{
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 20px;
+    background-color: #BCBCBC;
+    width: 40px;
+    height: 35px;
+    display: block;
+}
+.tuclose img{
+    width: 100%;
+    height: 100%;
+}
+.tutop{
+    width: 100%;
+    height: 70%;
+    background-color: #fa0;
+}
+.tutop_cont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.tutop_left{
+    width: 35%;
+    /*background-color: red;*/
+    padding-top: 80px;
+    padding-left: 30px;
+}
+.tutop_left img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 33px;
+}
+
+.tutop_left h5{
+    font-family: neohan;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.tutop_left h5 b{
+    font-size: 25px;
+    display: block;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+.tutop_right{
+    font-family: neohan;
+    width: 65%;
+    padding-top: 80px;
+    padding-left: 85px;
+    line-height: 2.3;
+    font-size: 22px;
+}
+.tutop_right ul img{
+    width: 25px;
+}
+
+.tubottom{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+}
+.tubottom_icon{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+}
+.tubottom_icon li{
+    flex: 1;
+    margin-left: 30px;
+}
+
+.tubottom_icon li img{
+    width: 100%;
+}
+.tb_img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+}
+
+
 
 /*어바웃미페이지 끝************************************************/
 
@@ -406,13 +573,17 @@ body {
     display: block;
 }
 
+.cont_thumb.openbooks {
+    background: url(../images/openbooksbg.jpg) no-repeat;
+    background-position: 50% 40%;
+}
 .cont_thumb.source {
-    background: url(../images/mysource2.PNG) no-repeat center;
+    background: url(../images/mysource1.jpg) no-repeat center;
     background-position: 50% 60%;
 }
 
-.cont_thumb.openbooks {
-    background: url(../images/openbooksbg.jpg) no-repeat;
+.cont_thumb.yeosu {
+    background: url(../images/yeosubg.jpg) no-repeat;
     background-position: 50% 40%;
 }
 
@@ -464,9 +635,19 @@ body {
 
 .myemoji {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: calc(50% - 160px);
+    top: calc(50% - 160px);
+    animation: emojiturn 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes emojiturn {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
 }
 
 .contact_add {
@@ -490,6 +671,7 @@ body {
 .contact_add dd span:hover {
     background-color: darkorange;
 }
+
 .contact_add a:hover {
     background-color: darkorange;
 }

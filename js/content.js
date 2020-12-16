@@ -11,8 +11,13 @@ var psts = 0; //0은 허용이고 1은 불허용이다
 var winH = $(window).height();
 
 $(function () {
+    $("#fullpage").fullpage({
+        autoScrolling:true,
+        scrollHorizontally:true
+    });
+    
     /*전체페이지 스크롤*/
-    $(document).on("mousewheel DOMMouseScroll", function (e) {
+    /*$(document).on("mousewheel DOMMouseScroll", function (e) {
 
         /////// 광스크롤막기 /////////////////
         if (psts === 1) return true; //돌아가!
@@ -39,7 +44,7 @@ $(function () {
             scrollTop: (winH * pno) + "px"
         }, 400);
 
-    }); /////// mousewheel /////////////////
+    }); /////// mousewheel /////////////////*/
     
     
     

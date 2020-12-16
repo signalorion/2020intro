@@ -18,6 +18,7 @@ var allowit = 0;
 
 
 $(function () {
+    
     /*전체페이지 스크롤*/
     $(document).on("mousewheel DOMMouseScroll", function (e) {
 
@@ -38,7 +39,7 @@ $(function () {
         if (delta < 0) {
             pno++;
             if (pno === totnum) pno = totnum - 1;
-        } 
+        }
         //윗방향
         else {
             pno--;
@@ -65,13 +66,13 @@ $(function () {
                 lastSts = 0; // 마지막 페이지 잠금 상태 초기화!
                 allowit = 0; //잠금허락 상태값 초기화!
             }, 600);
- 
+
         } /// if //////////////////
 
         if (scTop > 0) allowit = 1; //잠금상태 허락할까요? 상태값 1로(응!true)
 
         var thisheight = $(this).height();
-        if ((scTop + thisheight) === y){
+        if ((scTop + thisheight) === y) {
             setTimeout(function () {
                 lastSts = 0; // 마지막 페이지 잠금 상태 초기화!
                 allowit = 0; //잠금허락 상태값 초기화!
@@ -80,5 +81,25 @@ $(function () {
 
 
     }); /////// scroll /////////////////
+
+    /*툴활용도**************************************/
+    $(".mytoolplus").click(function () {
+        $(".tooluse").slideDown(400);
+    });
+    $(".tuclose").click(function () {
+        $(".tooluse").fadeOut(400);
+    });
+
+$(".tutop_cont").eq(1).hide();
+    
+    $(".tool_design").click(function () {
+        $(".tutop_cont").eq(0).siblings().hide();
+        $(".tutop_cont").eq(0).show();
+    });
+    $(".tool_coding").click(function () {
+        $(".tutop_cont").eq(1).siblings().hide();
+        $(".tutop_cont").eq(1).show();
+    });
+
 
 });

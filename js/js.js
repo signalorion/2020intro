@@ -9,6 +9,8 @@ var dcsb = 0; //0은 불허용이고 1은 허용
 $(function () {
  
     /****************************************************인트로에서*/
+    
+    
     $(".search_box_fake").click(function () {
         if (dcsb === 1) {
             return false;
