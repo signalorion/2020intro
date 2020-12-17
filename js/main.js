@@ -69,15 +69,15 @@ $(function () {
 
         } /// if //////////////////
 
-        if (scTop > 0) allowit = 1; //잠금상태 허락할까요? 상태값 1로(응!true)
-
+        
         var thisheight = $(this).height();
-        if ((scTop + thisheight) === y) {
-            setTimeout(function () {
+        if (scTop > 0) allowit = 1; //잠금상태 허락할까요? 상태값 1로(응!true)
+        if ((scTop + thisheight) === y){
                 lastSts = 0; // 마지막 페이지 잠금 상태 초기화!
                 allowit = 0; //잠금허락 상태값 초기화!
-            }, 400);
         }
+
+        
 
 
     }); /////// scroll /////////////////

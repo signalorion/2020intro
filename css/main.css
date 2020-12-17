@@ -6,9 +6,9 @@
 @import url(common.css);
 
 /*********************************************인트로페이지 시작*/
-body {
+/*body {
     overflow: hidden;
-}
+}*/
 
 #intro::after {
     background: url(../images/bigQM.png) no-repeat center/contain;
